@@ -8,7 +8,7 @@
 
 <meta name="author" content="Fernando Rodriguez, Danilo Serrano">
 
-<title>Vista de hola mundo</title>
+<title>Trabajo en clase 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,8 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#trabajo-en-clase-2" id="toc-trabajo-en-clase-2" class="nav-link active" data-scroll-target="#trabajo-en-clase-2">Trabajo en clase 2</a></li>
-  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link active" data-scroll-target="#actividades">Actividades</a>
   <ul class="collapse">
   <li><a href="#pregunta-1" id="toc-pregunta-1" class="nav-link" data-scroll-target="#pregunta-1">Pregunta 1</a></li>
   <li><a href="#pregunta-2-ubicación-de-especies" id="toc-pregunta-2-ubicación-de-especies" class="nav-link" data-scroll-target="#pregunta-2-ubicación-de-especies">Pregunta 2 – Ubicación de especies</a></li>
@@ -141,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Vista de hola mundo</h1>
+<h1 class="title">Trabajo en clase 2</h1>
 </div>
 
 
@@ -164,12 +163,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="trabajo-en-clase-2" class="level1">
-<h1>Trabajo en clase 2</h1>
 <p><strong>Objetivo</strong></p>
 <p><em>Desarrollar la capacidad de seleccionar el tipo adecuado de gráfico para responder preguntas sobre datos categóricos y cuantitativos.</em></p>
 <p><em>URL del dataset:</em> https://raw.githubusercontent.com/erickedu85/dataset/master/penguins.csv</p>
-<div id="24c98834" class="cell" data-execution_count="1">
+<div id="614dd290" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
@@ -177,10 +174,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-</section>
 <section id="actividades" class="level1">
 <h1>Actividades</h1>
-<div id="9032ac82" class="cell" data-execution_count="2">
+<div id="063d1347" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/erickedu85/dataset/master/penguins.csv"</span>)</span>
@@ -260,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="3d23839f" class="cell" data-execution_count="3">
+<div id="d26f1d96" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -282,7 +278,7 @@ dtypes: float64(4), str(3)
 memory usage: 18.9 KB</code></pre>
 </div>
 </div>
-<div id="60d19269" class="cell" data-execution_count="4">
+<div id="d4677b32" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>indices_nulos <span class="op">=</span> data[data.isnull().<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)].index</span>
@@ -318,7 +314,7 @@ memory usage: 18.9 KB</code></pre>
 339          NaN  NaN  </code></pre>
 </div>
 </div>
-<div id="e2eaa40a" class="cell" data-execution_count="5">
+<div id="9045fe89" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.drop([<span class="dv">3</span>,<span class="dv">339</span>])</span>
@@ -349,16 +345,16 @@ memory usage: 20.8 KB</code></pre>
 <ul>
 <li>¿Cómo varía la masa corporal (body_mass_g) entre las diferentes especies y islas de los pingüinos?</li>
 </ul>
-<p>Se mantiene casi constante y se evidencia que la especia Gentoo es la que tiene mayor masa en la isla biscoe de donde es nativa.</p>
+<p>Se mantiene casi constante y se evidencia que la especie Gentoo es la que tiene mayor masa en la isla Biscoe de donde es nativa.</p>
 <ul>
 <li>¿Qué tipo de gráfico usarías para comparar la distribución de una variable cuantitativa entre varios grupos definidos por dos variables categóricas?</li>
 </ul>
-<p>Usaría el diagrama de cajas y bigotes porque me permite ver las distribucions por isla y por especie de pinguino, si el problema tuviera más categorías usaría un histograma.</p>
+<p>Usaría el diagrama de cajas y bigotes porque me permite ver las distribuciones por isla y por especie de pinguino, si el problema tuviera más categorías usaría un histograma.</p>
 <ul>
 <li>¿Cómo facilitarías la comparación entre subgrupos sin sobrecargar un solo gráfico?</li>
 </ul>
 <p>Para comparar una variable cuantitativa entre subgrupos definidos por dos variables categóricas sin saturar el gráfico, es útil usar <strong>facetas o capas</strong> que dividan los datos en subgráficos por un factor y <strong>colores o formas</strong> para el otro. También se pueden mostrar <strong>resúmenes estadísticos</strong> como medianas o IQR en lugar de todos los datos. Mantener <strong>la misma escala y un orden lógico</strong> facilita la comparación visual.</p>
-<div id="2ea8a044" class="cell" data-execution_count="6">
+<div id="f2cab6ba" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pregunta_1 <span class="op">=</span> alt.Chart(data).mark_boxplot(extent<span class="op">=</span><span class="st">'min-max'</span>).encode(</span>
@@ -377,23 +373,23 @@ memory usage: 20.8 KB</code></pre>
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-ad3593c9efe84b3c92877e24d5d9b8f6.vega-embed {
+  #altair-viz-3f4eebc6ae4949ea83b532280166a512.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-ad3593c9efe84b3c92877e24d5d9b8f6.vega-embed details,
-  #altair-viz-ad3593c9efe84b3c92877e24d5d9b8f6.vega-embed details summary {
+  #altair-viz-3f4eebc6ae4949ea83b532280166a512.vega-embed details,
+  #altair-viz-3f4eebc6ae4949ea83b532280166a512.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-ad3593c9efe84b3c92877e24d5d9b8f6"></div>
+<div id="altair-viz-3f4eebc6ae4949ea83b532280166a512"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ad3593c9efe84b3c92877e24d5d9b8f6") {
-      outputDiv = document.getElementById("altair-viz-ad3593c9efe84b3c92877e24d5d9b8f6");
+    if (outputDiv.id !== "altair-viz-3f4eebc6ae4949ea83b532280166a512") {
+      outputDiv = document.getElementById("altair-viz-3f4eebc6ae4949ea83b532280166a512");
     }
 
     const paths = {
@@ -455,8 +451,8 @@ memory usage: 20.8 KB</code></pre>
 <ul>
 <li>¿Qué técnica visual te permitiría mostrar esta relación de forma compacta y clara?</li>
 </ul>
-<p>Un gráfico de calor para ver los conteos de las especios en un solo gráfico mostrando cuantos hay en que lugar.</p>
-<div id="b68c353f" class="cell" data-execution_count="7">
+<p>Un gráfico de calor para ver los conteos de las especies en un solo gráfico mostrando cuantos hay en que lugar.</p>
+<div id="13e16d8e" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>heatmap <span class="op">=</span> alt.Chart(data).mark_rect().encode(</span>
@@ -483,23 +479,23 @@ memory usage: 20.8 KB</code></pre>
 <div class="cell-output cell-output-display" data-execution_count="7">
 
 <style>
-  #altair-viz-cc3d4c9eb5164803986d29ec7053f867.vega-embed {
+  #altair-viz-a559015b4ac64b1ba73664b153ea9af6.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-cc3d4c9eb5164803986d29ec7053f867.vega-embed details,
-  #altair-viz-cc3d4c9eb5164803986d29ec7053f867.vega-embed details summary {
+  #altair-viz-a559015b4ac64b1ba73664b153ea9af6.vega-embed details,
+  #altair-viz-a559015b4ac64b1ba73664b153ea9af6.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-cc3d4c9eb5164803986d29ec7053f867"></div>
+<div id="altair-viz-a559015b4ac64b1ba73664b153ea9af6"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-cc3d4c9eb5164803986d29ec7053f867") {
-      outputDiv = document.getElementById("altair-viz-cc3d4c9eb5164803986d29ec7053f867");
+    if (outputDiv.id !== "altair-viz-a559015b4ac64b1ba73664b153ea9af6") {
+      outputDiv = document.getElementById("altair-viz-a559015b4ac64b1ba73664b153ea9af6");
     }
 
     const paths = {
@@ -560,7 +556,7 @@ memory usage: 20.8 KB</code></pre>
 <p>Las hembras tienen mayor tamaño y profundidad de picos que los machos.</p>
 <section id="largo-del-pico" class="level3">
 <h3 class="anchored" data-anchor-id="largo-del-pico">LARGO DEL PICO</h3>
-<div id="a2d90d9f" class="cell" data-execution_count="8">
+<div id="3bde4ca7" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>chart_largo <span class="op">=</span> alt.Chart(data_without_nan_sex).transform_density(</span>
@@ -582,23 +578,23 @@ memory usage: 20.8 KB</code></pre>
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-fe2fc9fabbf54a45b14a01cdce774516.vega-embed {
+  #altair-viz-60ebbea532344d1da4ec8595b0fe00a4.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-fe2fc9fabbf54a45b14a01cdce774516.vega-embed details,
-  #altair-viz-fe2fc9fabbf54a45b14a01cdce774516.vega-embed details summary {
+  #altair-viz-60ebbea532344d1da4ec8595b0fe00a4.vega-embed details,
+  #altair-viz-60ebbea532344d1da4ec8595b0fe00a4.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-fe2fc9fabbf54a45b14a01cdce774516"></div>
+<div id="altair-viz-60ebbea532344d1da4ec8595b0fe00a4"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fe2fc9fabbf54a45b14a01cdce774516") {
-      outputDiv = document.getElementById("altair-viz-fe2fc9fabbf54a45b14a01cdce774516");
+    if (outputDiv.id !== "altair-viz-60ebbea532344d1da4ec8595b0fe00a4") {
+      outputDiv = document.getElementById("altair-viz-60ebbea532344d1da4ec8595b0fe00a4");
     }
 
     const paths = {
@@ -653,7 +649,7 @@ memory usage: 20.8 KB</code></pre>
 </section>
 <section id="profundidad-del-pico" class="level3">
 <h3 class="anchored" data-anchor-id="profundidad-del-pico">PROFUNDIDAD DEL PICO</h3>
-<div id="f27ab9bd" class="cell" data-execution_count="9">
+<div id="07056dac" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>chart_profundo <span class="op">=</span> alt.Chart(data_without_nan_sex).transform_density(</span>
@@ -675,23 +671,23 @@ memory usage: 20.8 KB</code></pre>
 <div class="cell-output cell-output-display">
 
 <style>
-  #altair-viz-19d85c01508b4cf6b248056fbc4e6d6a.vega-embed {
+  #altair-viz-d26df4bc560347bd8a0d63e824edd625.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-19d85c01508b4cf6b248056fbc4e6d6a.vega-embed details,
-  #altair-viz-19d85c01508b4cf6b248056fbc4e6d6a.vega-embed details summary {
+  #altair-viz-d26df4bc560347bd8a0d63e824edd625.vega-embed details,
+  #altair-viz-d26df4bc560347bd8a0d63e824edd625.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-19d85c01508b4cf6b248056fbc4e6d6a"></div>
+<div id="altair-viz-d26df4bc560347bd8a0d63e824edd625"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-19d85c01508b4cf6b248056fbc4e6d6a") {
-      outputDiv = document.getElementById("altair-viz-19d85c01508b4cf6b248056fbc4e6d6a");
+    if (outputDiv.id !== "altair-viz-d26df4bc560347bd8a0d63e824edd625") {
+      outputDiv = document.getElementById("altair-viz-d26df4bc560347bd8a0d63e824edd625");
     }
 
     const paths = {

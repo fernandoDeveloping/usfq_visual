@@ -46,11 +46,11 @@ data_without_nan_sex.info()
 
 * ¿Cómo varía la masa corporal (body_mass_g) entre las diferentes especies y islas de los pingüinos?
 
-Se mantiene casi constante y se evidencia que la especia Gentoo es la que tiene mayor masa en la isla biscoe de donde es nativa. 
+ Se mantiene casi constante y se evidencia que la especie Gentoo es la que tiene mayor masa en la isla Biscoe de donde es nativa. 
 
 * ¿Qué tipo de gráfico usarías para comparar la distribución de una variable cuantitativa entre varios grupos definidos por dos variables categóricas?
 
-Usaría el diagrama de cajas y bigotes porque me permite ver las distribucions por isla y por especie de pinguino, si el problema tuviera más categorías usaría un histograma.
+Usaría el diagrama de cajas y bigotes porque me permite ver las distribuciones por isla y por especie de pinguino, si el problema tuviera más categorías usaría un histograma.
 
 
 * ¿Cómo facilitarías la comparación entre subgrupos sin sobrecargar un solo gráfico?
@@ -82,7 +82,7 @@ Adelie se encuentra en todas las islas y Gentoo se encuentra solo en una isla qu
 
 * ¿Qué técnica visual te permitiría mostrar esta relación de forma compacta y clara?
 
-Un gráfico de calor para ver los conteos de las especios en un solo gráfico mostrando cuantos hay en que lugar.
+Un gráfico de calor para ver los conteos de las especies en un solo gráfico mostrando cuantos hay en que lugar.
 
 
 ```{python}
