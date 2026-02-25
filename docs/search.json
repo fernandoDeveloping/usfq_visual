@@ -81,14 +81,28 @@
     "href": "index.html",
     "title": "Vista de hola mundo",
     "section": "",
-    "text": "Code\nimport altair as alt\nfrom vega_datasets import data"
+    "text": "Objetivo\nDesarrollar la capacidad de seleccionar el tipo adecuado de gráfico para responder preguntas sobre datos categóricos y cuantitativos.\nURL del dataset: https://raw.githubusercontent.com/erickedu85/dataset/master/penguins.csv\n\n\nCode\nimport altair as alt\nimport pandas as pd\nimport numpy as np"
   },
   {
-    "objectID": "index.html#integracion",
-    "href": "index.html#integracion",
+    "objectID": "index.html#pregunta-1",
+    "href": "index.html#pregunta-1",
     "title": "Vista de hola mundo",
-    "section": "",
-    "text": "Code\nimport altair as alt\nfrom vega_datasets import data"
+    "section": "Pregunta 1",
+    "text": "Pregunta 1\n\n¿Cómo varía la masa corporal (body_mass_g) entre las diferentes especies y islas de los pingüinos?\n\nSe mantiene casi constante y se evidencia que la especia Gentoo es la que tiene mayor masa en la isla biscoe de donde es nativa.\n\n¿Qué tipo de gráfico usarías para comparar la distribución de una variable cuantitativa entre varios grupos definidos por dos variables categóricas?\n\nUsaría el diagrama de cajas y bigotes porque me permite ver las distribucions por isla y por especie de pinguino, si el problema tuviera más categorías usaría un histograma.\n\n¿Cómo facilitarías la comparación entre subgrupos sin sobrecargar un solo gráfico?\n\nPara comparar una variable cuantitativa entre subgrupos definidos por dos variables categóricas sin saturar el gráfico, es útil usar facetas o capas que dividan los datos en subgráficos por un factor y colores o formas para el otro. También se pueden mostrar resúmenes estadísticos como medianas o IQR en lugar de todos los datos. Mantener la misma escala y un orden lógico facilita la comparación visual.\n\n\nCode\npregunta_1 = alt.Chart(data).mark_boxplot(extent='min-max').encode(\n    x=alt.X('species:N', title='Especie'),\n    y=alt.Y('body_mass_g:Q', title='Masa Corporal (g)', scale=alt.Scale(zero=False)),\n    color=alt.Color('species:N', legend=None) # Color por especie\n).properties(\n    width=300,\n    height=300\n).facet(\n    column=alt.Column('island:N', title='Distribución por Isla')\n)\n\npregunta_1.display()"
+  },
+  {
+    "objectID": "index.html#pregunta-2-ubicación-de-especies",
+    "href": "index.html#pregunta-2-ubicación-de-especies",
+    "title": "Vista de hola mundo",
+    "section": "Pregunta 2 – Ubicación de especies",
+    "text": "Pregunta 2 – Ubicación de especies\n\n¿Qué especies de pingüinos se encuentran en cada isla? ¿Alguna especie está presente solo en una isla?\n\nAdelie se encuentra en todas las islas y Gentoo se encuentra solo en una isla que es Biscoe\n\n¿Qué técnica visual te permitiría mostrar esta relación de forma compacta y clara?\n\nUn gráfico de calor para ver los conteos de las especios en un solo gráfico mostrando cuantos hay en que lugar.\n\n\nCode\nheatmap = alt.Chart(data).mark_rect().encode(\n    x=alt.X('island:N', title='Isla'),\n    y=alt.Y('species:N', title='Especie'),\n    color=alt.Color('count():Q', scale=alt.Scale(scheme='greens'), title='Cantidad'),\n    tooltip=['species', 'island', 'count()']\n).properties(\n    title='Distribución de Especies por Isla',\n    width=300,\n    height=200\n)\ntext = heatmap.mark_text(baseline='middle').encode(\n    text='count():Q',\n    color=alt.condition(\n        alt.datum['count()'] &gt; 100,\n        alt.value('white'),\n        alt.value('black')\n    )\n)\n\n(heatmap + text)"
+  },
+  {
+    "objectID": "index.html#pregunta-3-diferencias-entre-sexos",
+    "href": "index.html#pregunta-3-diferencias-entre-sexos",
+    "title": "Vista de hola mundo",
+    "section": "Pregunta 3 – Diferencias entre sexos",
+    "text": "Pregunta 3 – Diferencias entre sexos\n\n¿Existen diferencias notables entre machos y hembras en alguna característica cuantitativa?\n\nLas hembras tienen mayor tamaño y profundidad de picos que los machos.\n\nLARGO DEL PICO\n\n\nCode\nchart_largo = alt.Chart(data_without_nan_sex).transform_density(\n    'culmen_length_mm',\n    as_=['culmen_length_mm', 'density'],\n    groupby=['sex']\n).mark_area(opacity=0.5).encode(\n    x=alt.X('culmen_length_mm:Q', title='Largo del Culmen (mm)'),\n    y=alt.Y('density:Q', title='Densidad'),\n    color=alt.Color('sex:N', title='Sexo')\n).properties(\n    title='Distribución del Largo del Pico por Sexo',\n    width=400,\n    height=250\n)\n\nchart_largo.display()\n\n\n\n\n\n\n\n\n\n\nPROFUNDIDAD DEL PICO\n\n\nCode\nchart_profundo = alt.Chart(data_without_nan_sex).transform_density(\n    'culmen_depth_mm',\n    as_=['culmen_depth_mm', 'density'],\n    groupby=['sex']\n).mark_area(opacity=0.5).encode(\n    x=alt.X('culmen_depth_mm:Q', title='Profundidad del Culmen (mm)'),\n    y=alt.Y('density:Q', title='Densidad'),\n    color=alt.Color('sex:N', title='Sexo', scale=alt.Scale(range=['#e7298a', '#1b9e77']))\n).properties(\n    title='Distribución de la Profundidad del Pico por Sexo',\n    width=400,\n    height=250\n)\n\nchart_profundo.display()"
   },
   {
     "objectID": "Lib/site-packages/httpcore-1.0.9.dist-info/licenses/LICENSE.html",
