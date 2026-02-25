@@ -1,9 +1,9 @@
 ---
-title: "Vista de hola mundo"
+title: "Trabajo en clase 2"
 author: "Fernando Rodriguez, Danilo Serrano"
 format: html
 ---
-# Trabajo en clase 2
+
 **Objetivo**
 
 *Desarrollar la capacidad de seleccionar el tipo adecuado de gráfico para responder preguntas sobre datos categóricos y cuantitativos.*
