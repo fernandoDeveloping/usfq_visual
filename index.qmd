@@ -1,0 +1,23 @@
+---
+title: "Vista de hola mundo"
+author: "Fernando Rodriguez"
+format: html
+---
+## Integracion
+
+```{python}
+import altair as alt
+from vega_datasets import data
+```
+
+# Autos
+
+```{python}
+cars = data.cars()
+cars
+```
+
+# Texto 
+```{python}
+
+```
